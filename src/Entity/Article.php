@@ -36,7 +36,7 @@ class Article {
 	private $published;
 	
 	/**
-	* @ManyToOne(targetEntity="Article", inversedBy="articles")
+	* @ManyToOne(targetEntity="Author", inversedBy="articles")
 	*/
 	private $author;
 

@@ -68,7 +68,7 @@ class AdminController extends Controller
             $article->setBody($request->getParam('body'));
 
             $article->setAuthor(
-                $this->ci->get('db')->find('App\Entity\Article', $request->getParam('author'))
+                $this->ci->get('db')->find('App\Entity\Author', $request->getParam('author'))
             );
 
             $this->ci->get('db')->persist($article);
