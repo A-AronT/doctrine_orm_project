@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collection\ArrayCollection;
 
 /**
 * @Entity
@@ -14,7 +14,6 @@ class Tag {
 	* @GeneratedValue
 	*/
 	private $id;
-
 	/**
 	* @Column(type="string")
 	*/
@@ -28,7 +27,7 @@ class Tag {
 	private $articles;
 
 	public function __construct(){
-		$this->articles = new ArrayCollection;
+		$this->articles = new \Doctrine\Common\Collections\ArrayCollection();
 	}
 
 	public function getId(){
